@@ -42,15 +42,32 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
 <!-- this is diff to his!-->
     <build>
         <plugins>
-<!--            <plugin>-->
-<!--                <artifactId>maven-surefire-plugin</artifactId>-->
-<!--                <version>2.22.0</version>-->
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+<!--                this is supposed to be in but it wont work-->
 <!--                <dependencies>-->
 <!--                    <dependency>-->
 <!--                        <groupId>org.junit.platform</groupId>-->
@@ -59,7 +76,7 @@
 <!--                        <scope>test</scope>-->
 <!--                    </dependency>-->
 <!--                </dependencies>-->
-<!--            </plugin>-->
+            </plugin>
 
 
 
