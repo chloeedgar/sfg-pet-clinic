@@ -49,7 +49,7 @@ public class OwnerController {
             owner.setLastName(""); // empty string signifies broadest possible search
         }
         //find owners by last name
-        List<Owner> results = ownerService.findAllByLastNameLike(owner.getLastName());
+        List<Owner> results = ownerService.findAllByLastNameLike("%" + owner.getLastName() + "%");
 
         if (results.isEmpty()) {
             result.rejectValue("lastName", "notFound", "not found");
@@ -63,7 +63,6 @@ public class OwnerController {
             model.addAttribute("selections", results);
             return "owners/ownersList";
         }
-
     }
 
     @GetMapping("/{ownerId}")
