@@ -12,9 +12,6 @@
     <artifactId>pet-clinic-web</artifactId>
 
     <properties>
-<!--        <maven.compiler.source>16</maven.compiler.source>-->
-<!--        <maven.compiler.target>16</maven.compiler.target>-->
-
         <!-- Web dependencies -->
         <webjars-bootstrap.version>3.3.6</webjars-bootstrap.version>
         <webjars-jquery-ui.version>1.11.4</webjars-jquery-ui.version>
@@ -46,7 +43,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
-<!--            <optional>true</optional>-->
         </dependency>
 
 
@@ -134,11 +130,8 @@
                     <artifactId>mockito-core</artifactId>
                     <version>2.23.0</version>
                 </dependency>
-
             </dependencies>
             </plugin>
-
         </plugins>
     </build>
-
 </project>
