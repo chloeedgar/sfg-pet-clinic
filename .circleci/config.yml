@@ -36,5 +36,5 @@ jobs:
             - v1-dependencies-
 
       # run tests!
-      - run: mvn install
+      - run: mvn integration-test
 
