@@ -20,5 +20,8 @@ public class BaseEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;  //reccomended to use box type - they can be null
 
+    public boolean isNew() {
+        return this.id==null;
+    }
 
 }
