@@ -17,7 +17,6 @@ public class PetMapServiceTest {
     @BeforeEach
     void setUp(){
         petMapService = new PetMapService();
-
         petMapService.save(Pet.builder().id(1L).build());
     }
 
